@@ -1,0 +1,18 @@
+[submodule "protocol"]
+	path = protocol
+	url = git@gitlab.com:c3d/spice-protocol.git
+[submodule "build"]
+	path = build
+	url = git@gitlab.com:c3d/build
+[submodule "libs/recorder"]
+	path = libs/recorder
+	url = git@gitlab.com:c3d/recorder
+[submodule "libs/common"]
+	path = libs/common
+	url = git@gitlab.com:c3d/spice-common
+[submodule "clients/gtk"]
+	path = clients/gtk
+	url = git@gitlab.com:c3d/spice-gtk
+[submodule "server"]
+	path = server
+	url = git@gitlab.com:c3d/spice-server
