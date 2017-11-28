@@ -1,0 +1,21 @@
+[submodule "protocol"]
+	path = protocol
+	url = ../spice-protocol.git
+[submodule "clients/gtk"]
+	path = clients/gtk
+	url = ../spice-gtk.git
+[submodule "server"]
+	path = server
+	url = ../spice-server.git
+[submodule "streaming-agent"]
+	path = streaming-agent
+	url = ../spice-streaming-agent.git
+[submodule "make-it-quick"]
+	path = make-it-quick
+	url = ../make-it-quick.git
+[submodule "common"]
+	path = common
+	url = ../spice-common.git
+[submodule "vd_agent"]
+	path = vd_agent
+	url = ../vd_agent.git
