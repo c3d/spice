@@ -16,3 +16,6 @@
 [submodule "server"]
 	path = server
 	url = git@gitlab.com:c3d/spice-server
+[submodule "streaming-agent"]
+	path = streaming-agent
+	url = git@gitlab.com:c3d/spice-streaming-agent.git

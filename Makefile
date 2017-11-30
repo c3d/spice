@@ -3,7 +3,8 @@ BUILD=build/
 SUBDIRS=	protocol	\
 		libs		\
 		clients		\
-		server
+		server		\
+		streaming-agent
 
 include $(BUILD)rules.mk
 
