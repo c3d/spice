@@ -52,4 +52,6 @@ build_scalability:
 
 autogen:
   script:
-  - make autogen
+  - time ./autogen.sh "make install"
+  - make restore
+  - time make -j
