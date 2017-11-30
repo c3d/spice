@@ -49,3 +49,7 @@ build_scalability:
   - make nuke
   - make -j8 debug
   - make -j8 debug
+
+autogen:
+  script:
+  - make autogen
