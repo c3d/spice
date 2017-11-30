@@ -1,0 +1,51 @@
+image: fedora:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+  - dnf install git libtool make pyparsing python2-six python3-six gcc-c++ redhat-rpm-config -y
+  - dnf install pkg-config glib2-devel gtk3-devel celt051-devel opus-devel pixman-devel openssl-devel libjpeg-devel cyrus-sasl-devel lz4-devel gstreamer1-devel gstreamer1-plugins-base-devel orc-devel   -y
+  - git submodule sync --recursive
+  - git submodule update --init --recursive
+
+test:
+  script:
+  - make test
+  - make debug-test
+  - make opt-test
+  - make release-test
+
+make_only:
+  script:
+  - make
+  - make opt
+  - make release
+  - make debug
+  - make opt
+  - make release
+  - make debug
+
+statistics:
+  script:
+  - make opt-test
+
+rebuild:
+  script:
+  - make debug
+  - make debug
+  - make nuke
+  - make debug
+  - make debug-restart
+
+help:
+  script:
+  - make help
+
+build_scalability:
+  script:
+  - make -j4 debug
+  - make -j4 debug
+  - make nuke
+  - make -j8 debug
+  - make -j8 debug

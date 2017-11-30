@@ -1,21 +1,21 @@
 [submodule "protocol"]
 	path = protocol
-	url = git@gitlab.com:c3d/spice-protocol.git
+	url = ../spice-protocol.git
 [submodule "build"]
 	path = build
-	url = git@gitlab.com:c3d/build
+	url = ../build.git
 [submodule "libs/recorder"]
 	path = libs/recorder
-	url = git@gitlab.com:c3d/recorder
+	url = ../recorder.git
 [submodule "libs/common"]
 	path = libs/common
-	url = git@gitlab.com:c3d/spice-common
+	url = ../spice-common.git
 [submodule "clients/gtk"]
 	path = clients/gtk
-	url = git@gitlab.com:c3d/spice-gtk
+	url = ../spice-gtk.git
 [submodule "server"]
 	path = server
-	url = git@gitlab.com:c3d/spice-server
+	url = ../spice-server.git
 [submodule "streaming-agent"]
 	path = streaming-agent
-	url = git@gitlab.com:c3d/spice-streaming-agent.git
+	url = ../spice-streaming-agent.git
