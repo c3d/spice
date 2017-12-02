@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init
+
 echo RECURSE=all                                        >  autogen.mk
 echo SUBDIRS=                                           >> autogen.mk
 
