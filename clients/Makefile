@@ -1,6 +1,5 @@
-TOP=../
-BUILD=$(TOP)build/
+MIQ=../make-it-quick/
 
 SUBDIRS=	gtk
 
-include $(BUILD)rules.mk
+include $(MIQ)rules.mk

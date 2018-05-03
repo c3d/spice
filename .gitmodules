@@ -1,9 +1,6 @@
 [submodule "protocol"]
 	path = protocol
 	url = ../spice-protocol.git
-[submodule "build"]
-	path = build
-	url = ../build.git
 [submodule "libs/recorder"]
 	path = libs/recorder
 	url = ../recorder.git
@@ -19,3 +16,6 @@
 [submodule "streaming-agent"]
 	path = streaming-agent
 	url = ../spice-streaming-agent.git
+[submodule "make-it-quick"]
+	path = make-it-quick
+	url = ../make-it-quick.git

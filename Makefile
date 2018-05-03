@@ -1,4 +1,4 @@
-BUILD=build/
+MIQ=make-it-quick/
 
 SUBDIRS=	protocol	\
 		libs		\
@@ -7,9 +7,9 @@ SUBDIRS=	protocol	\
 		streaming-agent
 
 -include autogen.mk
-include $(BUILD)rules.mk
+include $(MIQ)rules.mk
 
-$(BUILD)rules.mk:
+$(MIQ)rules.mk:
 	git submodule update --init --recursive
 
 all install: $(AUTOGEN:%=%.autogen)

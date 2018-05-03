@@ -1,7 +1,9 @@
-TOP=../
-BUILD=$(TOP)build/
+MIQ=make-it-quick/
 
 SUBDIRS=	recorder	\
 		common
 
-include $(BUILD)rules.mk
+include $(MIQ)rules.mk
+
+$(MIQ)rules.mk:
+	git clone https://github.com/c3d/make-it-quick.git
