@@ -1,10 +1,10 @@
 MIQ=make-it-quick/
 
 export SPICE_PROTOCOL=$(abspath protocol)/
-export SPICE_COMMON=$(abspath libs/common)/
+export SPICE_COMMON=$(abspath common)/
 
 SUBDIRS=	protocol	\
-		libs		\
+		common		\
 		clients		\
 		server		\
 		streaming-agent

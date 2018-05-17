@@ -1,12 +1,6 @@
 [submodule "protocol"]
 	path = protocol
 	url = ../spice-protocol.git
-[submodule "libs/recorder"]
-	path = libs/recorder
-	url = ../recorder.git
-[submodule "libs/common"]
-	path = libs/common
-	url = ../spice-common.git
 [submodule "clients/gtk"]
 	path = clients/gtk
 	url = ../spice-gtk.git
@@ -19,3 +13,6 @@
 [submodule "make-it-quick"]
 	path = make-it-quick
 	url = ../make-it-quick.git
+[submodule "common"]
+	path = common
+	url = https://github.com/c3d/spice-common.git
