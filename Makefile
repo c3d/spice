@@ -2,13 +2,15 @@ MIQ=make-it-quick/
 
 export SPICE_PROTOCOL=$(abspath protocol)/
 export SPICE_COMMON=$(abspath common)/
+export SPICE_STREAMING_AGENT=$(abspath streaming-agent)/
 
-SUBDIRS=	protocol	\
-		common		\
-		clients		\
-		server		\
-		streaming-agent	\
-		vd_agent
+SUBDIRS=	protocol			\
+		common				\
+		clients				\
+		server				\
+		streaming-agent			\
+		vd_agent			\
+		$(wildcard *-streaming-plugin)
 
 -include autogen.mk
 include $(MIQ)rules.mk
