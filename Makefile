@@ -7,7 +7,8 @@ SUBDIRS=	protocol	\
 		common		\
 		clients		\
 		server		\
-		streaming-agent
+		streaming-agent	\
+		vd_agent
 
 -include autogen.mk
 include $(MIQ)rules.mk
