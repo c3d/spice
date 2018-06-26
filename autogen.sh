@@ -13,7 +13,7 @@ if [ "x$1" != "x" ]; then
     shift
 fi
 
-for DIR in protocol libs/common clients/gtk server streaming-agent
+for DIR in protocol common clients/gtk server streaming-agent
 do
     echo Entering $DIR
     (cd $DIR && ./autogen.sh ${1+"$@"} && ([ -z "$BUILD_STEP" ] || $BUILD_STEP))

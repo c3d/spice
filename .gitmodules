@@ -15,7 +15,7 @@
 	url = ../make-it-quick.git
 [submodule "common"]
 	path = common
-	url = https://github.com/c3d/spice-common.git
+	url = ../spice-common.git
 [submodule "vd_agent"]
 	path = vd_agent
 	url = ../vd_agent.git
