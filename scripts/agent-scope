@@ -1,0 +1,4 @@
+#!/bin/bash
+export RECORDER_NOGL=1
+
+recorder_scope fps avg_bps &

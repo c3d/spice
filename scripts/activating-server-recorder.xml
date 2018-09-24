@@ -1,0 +1,5 @@
+  <qemu:commandline>
+    <qemu:env name='RECORDER_SHARE' value='/tmp/spice-server-recorder-share'/>
+    <qemu:env name='RECORDER_TRACES' value='help:stream_channel_activate:stream_stat=stream_items,stream_total_items,stream_items_size,stream_totals_items_size'/>
+    <qemu:env name='SPICE_TRACES' value='help'/>
+  </qemu:commandline>

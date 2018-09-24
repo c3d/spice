@@ -1,0 +1,15 @@
+#!/bin/bash
+TRACES="\
+gst_schedule_frame_warning=0 \
+metric_received_fps=rec_fps,rec_fps_total,rec_fps_duration \
+metric_decoded_fps=dec_fps,dec_fps_total,dec_fps_duration \
+metric_displayed_fps=dsp_fps,dps_fps_total,dsp_fps_duration \
+metric_dropped_fps=drp_fps,drp_fps_total,drp_fps_duration \
+metric_received_bps=rec_bps,rec_bps_total,rec_bps_duration \
+metric_decoded_bps=dec_bps,dec_bps_total,dec_bps_duration \
+metric_displayed_bps=dsp_bps,dps_bps_total,dsp_bps_duration \
+metric_dropped_bps=drp_bps,drp_bps_total,drp_bps_duration \
+metric_queue_length=qlen,qlen_total,qlen_duration"
+
+echo $TRACES
+SPICE_TRACES="$TRACES"  spicy -h turbo -p 5900

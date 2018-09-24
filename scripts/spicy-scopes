@@ -1,0 +1,9 @@
+#!/bin/bash
+recorder_scope 'rec_fps|dec_fps|dsp_fps' &
+recorder_scope 'rec_bps|dec_bps|dsp_bps' &
+recorder_scope drp_fps drp_bps &
+recorder_scope qlen &
+
+recorder_scope -c gst_schedule_frame_time=delay,time,now,qlength
+sleep 1
+recorder_scope delay qlength

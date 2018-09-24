@@ -1,0 +1,9 @@
+#!/bin/bash
+TRACES=" \
+nvidia_set_fps=fps \
+nvidia_set_max_bps=max_bps \
+nvidia_set_avg_bps=avg_bps \
+nvidia_set_gop=gop \
+"
+
+DISPLAY=:1 RECORDER_TRACES="$TRACES" spice-streaming-agent

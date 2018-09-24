@@ -1,0 +1,34 @@
+#!/bin/bash
+export RECORDER_NOGL=1
+export RECORDER_SHARE=/tmp/spice-server-recorder-share
+
+TRACES=" \
+smstr_fps=old_fps,fps,fps_tgt,fps_ideal \
+smstr_bps=old_bps,bps,bps_tgt,bps_ideal \
+metric_received_fps=rec_fps,rec_fps_avg,rec_fps_raw,rec_fps_duration \
+metric_decoded_fps=dec_fps,dec_fps_avg,dec_fps_raw,dec_fps_duration \
+metric_displayed_fps=dsp_fps,dsp_fps_avg,dsp_fps_raw,dsp_fps_duration \
+metric_dropped_fps=drp_fps,drp_fps_avg,drp_fps_raw,drp_fps_duration \
+metric_received_bps=rec_bps,rec_bps_avg,rec_bps_raw,rec_bps_duration \
+metric_decoded_bps=dec_bps,dec_bps_avg,dec_bps_raw,dec_bps_duration \
+metric_displayed_bps=dsp_bps,dsp_bps_avg,dsp_bps_raw,dsp_bps_duration \
+metric_dropped_bps=drp_bps,drp_bps_avg,drp_bps_raw,drp_bps_duration \
+metric_queue_length=qlen,qlen_raw,qlen_duration \
+"
+
+SHOW=" \
+smstr_fps \
+smstr_bps \
+"
+
+recorder_scope -c "$TRACES" -c "$SHOW"
+
+sleep 3
+
+recorder_scope 'fps|fps_old|fps_tgt' 'bps|bps_old|bps_tgt' &
+recorder_scope 'rec_fps|dec_fps|dsp_fps' &
+recorder_scope 'rec_bps|dec_bps|dsp_bps' &
+recorder_scope 'rec_bps|rec_bps_avg' &
+recorder_scope 'rec_fps|rec_fps_avg' &
+recorder_scope qlen &
+
